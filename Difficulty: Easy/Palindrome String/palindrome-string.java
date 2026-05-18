@@ -1,20 +1,18 @@
 class Solution {
     boolean isPalindrome(String s) {
-       
-        String s2="";
-        int j =s.length()-1;
-        int i = 0;
-        while(i < j){
-            if(s.charAt(i) != s.charAt(j)){
-                return false;
-            }
-            i++;
-            j--;
-        }
-       
+        // code here
         
-          return true;  
-        
-        
+      int i = 0;
+      int j =s.length()-1;
+      while(i<j){
+          if(s.charAt(i) != s.charAt(j)){
+              return false;
+          }
+          else{
+              i++;
+              j--;
+          }
+      }
+      return true;
     }
 }
