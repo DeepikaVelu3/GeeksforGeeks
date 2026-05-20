@@ -1,21 +1,18 @@
 class Solution {
     void rearrange(ArrayList<Integer> arr) {
         // code here
-        int n = arr.size();
-        List<Integer> pos = new ArrayList<>();
-        List<Integer> neg = new  ArrayList<>();
-        for(int i = 0; i < n; i++){
-             if(arr.get(i) >= 0){
-                 pos.add(arr.get(i));
-             }
-             else{
-                 neg.add(arr.get(i));
-             }
+        ArrayList<Integer> pos = new ArrayList<>();
+        ArrayList<Integer> neg = new ArrayList<>();
+        for(int num :arr){
+            if(num >= 0){
+                pos.add(num);
+            }
+            else{
+                neg.add(num);
+            }
         }
-        
-        
-        int i = 0;
-        int j = 0;
+        int i =0;
+        int j=0;
         int k = 0;
         
         while(i < pos.size()  && j < neg.size()){
