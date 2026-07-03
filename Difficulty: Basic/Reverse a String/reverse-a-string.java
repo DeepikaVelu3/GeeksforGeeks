@@ -1,21 +1,12 @@
-// User function Template for Java
-
 class Solution {
     public static String reverseString(String s) {
         // code here
-        int left =0;
-        int right = s.length()-1;
-        char []ch = s.toCharArray();
-        while(left<right){
-         
-              char temp = ch[left];
-              ch[left] = ch[right];
-              ch[right]=temp;
-          
-          left++;
-          right--;
+        String st ="";
+        int n = s.length();
+        for(int i = n - 1; i >=0; i--){
+            char ch = s.charAt(i);
+            st += ch;
         }
-       String str = new String(ch);
-       return str;
+        return st;
     }
 }
